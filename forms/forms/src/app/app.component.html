@@ -1,0 +1,39 @@
+<div id="main">
+  <h1 id="h1">Forms</h1>
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    
+    <label class="label"> Name</label><br>
+    <input type="text" #name="ngModel" placeholder="Enter your name" name="name" [class.valid]="name.untouched && name.invalid" class="input" ngModel required [(ngModel)]="userModel.name">
+    
+    <br>
+    <label class="label">Email</label><br>
+    <input type="email" #email="ngModel" placeholder="Email@gmai.com" name="email" class="input" ngModel pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required [(ngModel)]="userModel.email">
+    <br>
+    <!-- <div *ngIf="email.errors && (email.touched || email.invalid)">
+      <small *ngIf="email.errors.required">Email is required</small>
+      <small *ngIf="email.errors.pattern">Email is not valid</small>
+    </div> -->
+    <br>
+    <label class="label">Select language</label><br>
+    <select name="language" id="lan" ngModel [class.valid]="topic.invalid && topic.untouched" #topic="ngModel" class="input" required [(ngModel)]="userModel.language">
+      <option selected class="input">I select</option>
+      <option *ngFor="let topic of topics ">{{topic}}</option>
+    </select><br>
+    <label class="label">Time</label><br>
+    <input type="radio" name="time" value="Morning" ngModel [(ngModel)]="userModel.time">
+    <label class="label">Morning</label>
+    <br>
+    <input type="radio" name="time" value="evening" ngModel [(ngModel)]="userModel.time">
+    <label class="label">Evening</label>
+    <br>
+    <button type="submit" class="btn" [disabled]="myForm.invalid">Submit</button>
+
+
+
+
+
+
+
+    <router-outlet></router-outlet>
+  </form>
+  </div>

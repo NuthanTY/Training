@@ -1,0 +1,35 @@
+.label{
+    font: 20px solid;
+    padding: 10px;
+    text-align: center;
+    
+}
+#h1{
+    color: lightsalmon;
+    text-align: center;
+    
+}
+.input{
+    height: 25px;
+    width: 200pxpx;
+    margin: 10px 10px;
+    
+}
+.valid{
+    border: 3px solid rgb(177, 76, 76);
+}
+#lan{
+    width: 200px;
+}
+.btn{
+    width:25%;
+    height: 25px;
+    margin:10px 10px;
+   background-color: rgb(102, 91, 226);
+   box-shadow: none;
+   color: aliceblue;
+}
+#main{
+    text-align: center;
+    
+}
