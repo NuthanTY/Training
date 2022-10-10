@@ -1,0 +1,9 @@
+p{
+    color: rgb(207, 48, 20);
+}
+p{
+    text-align: center;
+}
+.selected{
+    color: blue;
+}
