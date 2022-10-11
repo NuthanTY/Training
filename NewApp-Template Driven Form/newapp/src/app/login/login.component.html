@@ -1,0 +1,21 @@
+<div id="main">
+    <div id="main1">
+      <form action="" #loginform="ngForm">
+  <h1 class="heading ">Welcome</h1>
+
+  <label for="name" class="label">User_Name</label><br>
+
+  <input type="text" class="input" placeholder="Enter your User_Name" required name="username" ngModel #username="ngModel"><br>
+
+  <small [class.dis]="username.valid || username.untouched" style="color:red; ">Enter UserName</small>
+
+  <label for="email" class="label" >Email</label><br><br><br>
+
+  <input type="email" class="input" placeholder="Enter your Email" required name="email" ngModel #email="ngModel"><br>
+
+  <small style="color:red; " [class.dis]="email.valid || email.untouched">Enter your email</small>
+
+  <button class="btn" appHover routerLink="/home" [disabled]="loginform.form.invalid" >Login</button>
+  </form>
+  </div>
+  </div>

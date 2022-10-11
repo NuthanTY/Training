@@ -1,0 +1,62 @@
+.main.heading{
+text-align: center;
+font-style: italic;
+color: rgb(173, 107, 20);
+}
+.input{
+    height: 40px;
+    width: 100%;
+    margin-left: 10px;
+
+}
+.form{
+    margin: 30px 30px;
+}
+.btn{
+    background-color: rgb(168, 142, 107);
+    margin: 30px;
+    width: 700px;
+    height:50px;
+    border-radius: 5px;
+    
+}
+*{
+    background-color: rgb(240, 233, 224);
+}
+.label{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    margin: 0px 0px 10px 10px;
+}
+.input{
+    background-color: white;
+    border: none;
+}
+.name{
+    margin-top: 20px;
+}
+#movie{
+    margin-left: 15px;
+    width: 500px;
+    height: 40px;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    border-radius: 5px;
+}
+.time{
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.time1{
+    
+    margin-top:20px
+}
+.is-invalid{
+    border:1px solid rgb(218, 107, 107);
+    border-radius: 5px;
+}
+.dis{
+    display: none;
+    
+}
