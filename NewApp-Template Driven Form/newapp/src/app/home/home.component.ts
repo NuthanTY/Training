@@ -26,12 +26,14 @@ export class HomeComponent implements OnInit {
   }
 
   submit(){
-    alert("Ticket booked sucessfully");
+  
+   alert("Ticket booked sucessfully");
   
  
   }
-
+  
   reset(){
+    
     this.usermodel.email
     this.usermodel.mobile;
   this.usermodel.movie;

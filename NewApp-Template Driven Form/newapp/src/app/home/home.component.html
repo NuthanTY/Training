@@ -4,7 +4,7 @@
     </div>
  
     <div class="form" >
-        <form action="" #homeform="ngForm">
+        <form action="" #homeform="ngForm" >
             <div class="name">
                 <label for="" class="label">Name</label><br>
                 <input type="text"  class="input " [class.is-invalid]="name.invalid" #name="ngModel" name="name" placeholder="Enter your Name" required  [(ngModel)]="usermodel.name">
@@ -38,6 +38,7 @@
                 <input type="radio" name="time" #time="ngModel" value="Night" class="time1" [(ngModel)]="usermodel.time"> <span class="time" > Night(8:00)</span>  <br>
             </div><br>
             <button class="btn" [disabled]="homeform.form.invalid || movieErrors" (click)="submit()" >Book Now</button> <button class="btn" onclick="reset()">Reset</button>
+            
             
 
         </form>

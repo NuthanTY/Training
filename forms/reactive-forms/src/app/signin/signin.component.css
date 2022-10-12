@@ -1,0 +1,54 @@
+.label{
+    font: 15px solid;
+    text-align: left;
+    
+    
+}
+#h1{
+    color: rgb(70, 110, 241);
+    text-align: center;
+    
+}
+
+.enclosed{
+    height: 900px;
+    align-items: center;
+    width: 30%;
+    margin: 0 35%;
+    
+    
+}
+.input{
+    width:90%;
+    height: 25px;
+    margin: 10px 10px;
+    
+}
+.valid{
+    border: 3px solid rgb(177, 76, 76);
+}
+
+.btn{
+    width:90%;
+    height: 25px;
+    margin:10px 10px;
+   background-color: rgb(29, 17, 168);
+   box-shadow: none;
+   color: aliceblue;
+}
+#main{
+    background-color: rgb(174, 174, 240);
+    
+}
+.p{
+    text-align: center;
+}
+.is-invalid{
+    border: 1px solid rgb(241, 149, 149);
+}
+.dis{
+    display: none;
+}
+.small{
+    color:rgb(212, 26, 26);
+}
