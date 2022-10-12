@@ -35,7 +35,7 @@
                     <small [class.dis]="login.get('phone')?.valid || login.get('phone')?.untouched"
                     class="small">Phone-Number is required is required</small>
                     
-                    <div formArrayName="phones" *ngFor="let phone of phones.controls; let i=index">
+                    <div formArrayName="phones" *ngFor="let phone of phones['controls']; let i=index">
                         <label for="" class="label">Alternate-Number</label>
                         <input type="tel" class="input" [formControlName]="i"
                         placeholder="Enter your Altername number">
@@ -57,7 +57,7 @@
                         </small>
                         <small class="small" *ngIf="login.get('age')?.errors?.['min']">Age must be 18 -80 </small>
                         <small class="small" *ngIf="login.get('age')?.errors?.['max']">Age must be 18 -80 </small>
-                        <small class="small" *ngIf="login.get('age')?.errors?.['minLength']">Age must be 18 -80 </small>
+                       
                     </div>
 
 
@@ -82,20 +82,20 @@
                     <div class="form-group">
 
                         <label class="label">City</label><br>
-                        <input type="text" formControlName="city" placeholder="City" name="city" class="input" required
+                        <input type="text" formControlName="city" placeholder="City" name="city" class="input" 
                             pattern="[A-Za-z\s]"><br>
                     </div>
                     <div class="form-group">
 
                         <label class="label">State</label><br>
                         <input type="text" formControlName="state" placeholder="State" name="state" class="input"
-                            required pattern="[A-Za-z\s]"><br>
+                             pattern="[A-Za-z\s]"><br>
                     </div>
                     <div class="form-group">
 
                         <label class="label">Postal-Code</label><br>
                         <input type="number" formControlName="code" placeholder="Postal-Code" name="code" class="input"
-                            required pattern="[0-9]{6}"><br>
+                             pattern="[0-9]{6}"><br>
                     </div>
 
 

@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   }
  
   loginfunction(){
-    
+
     if(this.login.invalid){
       alert("Fill all the required Field")
     }
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     email:['',[Validators.required,Validators.email]],
     phone:['',[Validators.required]],
     phones:this.fb.array(['']),
-    age:['',[Validators.required,Validators.min(18),Validators.max(80),Validators.minLength(2)]],
+    age:['',[Validators.required,Validators.min(18),Validators.max(80)]],
     gender:[''],
     address:this.fb.group({
       city:[''],
