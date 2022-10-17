@@ -8,8 +8,10 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-
-  constructor(private form:FormBuilder) { }
+  hide = true;
+  constructor(private form:FormBuilder) { 
+    
+  }
 
   ngOnInit(): void {
   }
@@ -27,6 +29,13 @@ check(){
   let password = (this.registration.get('password')?.value);
   let confirm = (this.registration.get('confirmpassword')?.value);
   if(password !== confirm){
+   
+   let v =document.getElementById('confirm')?.innerHTML;
+    v="not matched";
+  //  document.getElementById('confirm')?.innerHTML="hfjhvz";
+
+   console.log(v)
+    
     alert("Confirm password doesnt match with password")
     
   }
@@ -35,6 +44,7 @@ check(){
     alert("Please fill all the above form")
   }
   else{
+    
     alert("Login sucesfull")
     location.reload();
   }

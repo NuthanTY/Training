@@ -13,39 +13,55 @@
             <form [formGroup]="registration">
                 <div class="form-group">
 
-                    <label class="label">*Email</label><br>
-                    <input formControlName="email" type="email" placeholder="Enter your email" name="email"
-                        class="input "
-                        [class.is-invalid]="registration.get('email')?.invalid && registration.get('email')?.touched">
+                    
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label class="label">Email</mat-label>
+                        <input matInput formControlName="email" type="email" placeholder="Enter your email" name="email"
+                           >
+                    </mat-form-field>
+                    <br>
                     <small [class.dis]="registration.get('email')?.valid || registration.get('email')?.untouched"
                         class="small">Required Email Id</small>
                 </div>
 
                 <br>
                 <div class="form-group">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label class="label">Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text' " formControlName="password" placeholder="Enterpass" name="password">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                              </button>
+                            
+                        </mat-form-field>
+                        <br>
 
-                    <label class="label">*Password</label><br>
-                    <input type="password" formControlName="password" placeholder="Enterpass" name="password"
-                        class="input"
-                        [class.is-invalid]="registration.get('password')?.invalid && registration.get('password')?.touched">
-                        <small [class.dis]="registration.get('password')?.valid || registration.get('password')?.untouched"
-                            class="small">Required Password</small><br>
+                    <small [class.dis]="registration.get('password')?.valid || registration.get('password')?.untouched"
+                        class="small">Required Password</small><br>
                 </div>
                 <div class="form-group">
 
-                    <label class="label">*Confirmpassword</label><br>
-                    <input type="text" formControlName="confirmpassword" placeholder="confirmpass" name="confirm"
-                        class="input"  [class.is-invalid]="registration.get('confirmpass')?.invalid && registration.get('confirmpassword')?.touched">
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label class="label">Confirm-Password</mat-label>
+                            <input matInput type="text" formControlName="confirmpassword" placeholder="confirmpass" name="confirm"
+                            >
+                        </mat-form-field>
+                        <br>
 
-                        <small [class.dis]="registration.get('confirmpassword')?.valid || registration.get('confirmpassword')?.untouched"
-                            class="small">Enter Password Again</small>
+                    <small
+                        [class.dis]="registration.get('confirmpassword')?.valid || registration.get('confirmpassword')?.untouched"
+                        class="small">Enter Password Again</small>
+                    <small id="confirm"></small>
                 </div>
                 <div class="signin">
                     <br>
-                    <button type="submit" class="btn" (click)="check()" >Login</button>
+
+                    <button mat-raised-button color="primary" (click)="check()" class="btn">Login</button>
                 </div>
                 <div class="login">
-                    <button type="button" class="btn" routerLink="/login">Create new account</button>
+
+                    <button mat-raised-button color="primary" routerLink="/login" class="btn">Create new
+                        account</button>
                 </div>
 
 

@@ -30,14 +30,14 @@
 
 .btn{
     width:90%;
-    height: 25px;
+   
     margin:10px 10px;
-   background-color: rgb(29, 17, 168);
-   box-shadow: none;
-   color: aliceblue;
+   
+   
+   
 }
 #main{
-    background-color: rgb(174, 174, 240);
+    background-color: rgb(255, 255, 255);
     
 }
 .p{
@@ -52,3 +52,9 @@
 .small{
     color:rgb(212, 26, 26);
 }
+.example-full-width {
+    width: 100%;
+  }
+  .example-form-field {
+    width:100%
+  }

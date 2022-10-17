@@ -1,6 +1,6 @@
 .label{
-    font: 15px solid;
-    text-align: left;
+    font: 20px solid;
+   
     
     
 }
@@ -20,9 +20,9 @@
     
 }
 .input{
-    width:90%;
-    height: 25px;
-    margin: 10px 10px;
+    /* width:10px; */
+   display: block;
+    
     
 }
 .valid{
@@ -31,15 +31,13 @@
 
 .btn{
     width:90%;
-    height: 25px;
+  
     margin:10px 10px;
-   background-color: rgb(29, 17, 168);
-   box-shadow: none;
-   color: aliceblue;
+  
 }
 #main{
     /* text-align: center; */
-    background-color: rgb(174, 174, 240);
+    background-color: rgb(255, 255, 255);
     
 }
 .inputR{
@@ -49,12 +47,27 @@
 span{
     font: 5px
 }
-.is-invalid{
-    border: 1px solid rgb(241, 149, 149);
-}
+
 .dis{
     display: none;
 }
 .small{
     color:rgb(212, 26, 26);
 }
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 20 px;
+  }
+
+  /* .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+   */
+  .example-full-width {
+    width: 100%;
+  }
+  .example-form-field {
+    width: 100%;
+  }
+  

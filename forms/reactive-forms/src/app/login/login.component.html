@@ -2,7 +2,7 @@
     <div class="enclosed">
         <div class="heading">
 
-            <h1 id="h1">Create Account</h1>
+            <h1 id="h1">CREATE ACCOUNT</h1>
         </div>
 
         <div class="form">
@@ -10,38 +10,64 @@
             <form [formGroup]="login">
                 <div class="form-group">
 
-                    <label class="label">Name*</label><br>
-                    <input formControlName="name" type="text" placeholder="Enter your Name" name="name" class="input"
-                        [class.is-invalid]="login.get('name')?.invalid && login.get('name')?.touched">
 
+
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label class="label">Name</mat-label>
+                        <input matInput placeholder="Enter your Name" name="name" formControlName="name"
+                            [class.is-invalid]="login.get('name')?.invalid && login.get('name')?.touched">
+                    </mat-form-field>
+                    <br>
                     <small [class.dis]="login.get('name')?.valid || login.get('name')?.untouched" class="small">Name is
                         required</small>
                 </div>
-                <br>
+
+
+
+
+                
                 <div class="form-group">
 
-                    <label class="label">Email*</label><br>
-                    <input formControlName="email" type="email" placeholder="Enter your email" name="email"
-                        class="input" [class.is-invalid]="login.get('email')?.invalid && login.get('email')?.touched">
+
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label class="label">Email</mat-label>
+                        <input matInput type="email" placeholder="Enter your email" name="email" formControlName="email"
+                            [class.is-invalid]="login.get('email')?.invalid && login.get('email')?.touched">
+                    </mat-form-field>
+                    <br>
 
                     <small [class.dis]="login.get('email')?.valid || login.get('email')?.untouched"
                         class="small">EmailId is required</small>
                 </div>
                 <div class="form-group">
-                    <label class="label">Mobile Number*</label><br>
-                    <input formControlName="phone" type="tel" placeholder="Enter your number" name="phone"
-                    class="input">
-                    
-                    <small [class.dis]="login.get('phone')?.valid || login.get('phone')?.untouched"
-                    class="small">Phone-Number is required is required</small>
-                    
-                    <div formArrayName="phones" *ngFor="let phone of phones['controls']; let i=index">
-                        <label for="" class="label">Alternate-Number</label>
-                        <input type="tel" class="input" [formControlName]="i"
-                        placeholder="Enter your Altername number">
+
+
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label class="label">Mobile </mat-label>
+                        <span matPrefix>+91 &nbsp;</span>
+                        <input matInput formControlName="phone" type="tel" placeholder="Enter your number" name="phone">
                         
+                    </mat-form-field>
+                    <br>
+
+
+
+                    <small [class.dis]="login.get('phone')?.valid || login.get('phone')?.untouched"
+                        class="small">Phone-Number is required is required</small>
+
+                    <div formArrayName="phones" *ngFor="let phone of phones['controls']; let i=index">
+                       
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label class="label">Alt - Mobile </mat-label>
+                            <input matInput type="tel" class="input" [formControlName]="i" placeholder="Enter your Altername number">
+                        </mat-form-field>
                     </div>
-                    <button *ngIf="toDisplay" type="button" (click)="add()" class="btn">Add number</button>
+
+                    <button mat-raised-button color="primary" *ngIf="toDisplay" (click)="add()" class="btn">Add
+                        Number</button>
+
 
                 </div>
 
@@ -49,60 +75,109 @@
 
                 <div class="form-group">
 
-                    <label class="label">Age*</label><br>
-                    <input type="number" formControlName="age" placeholder="your Age" name="Age" class="input"
-                        [class.is-invalid]="login.get('age')?.invalid && login.get('age')?.touched">
+                    
+
+                        <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label class="label">Age</mat-label>
+                            <input matInput type="number" formControlName="age" placeholder="your Age" name="Age" class="input">
+                        </mat-form-field>
+                        <br>
                     <div *ngIf="login.get('age')?.invalid && login.get('age')?.touched">
                         <small class="small" *ngIf="login.get('age')?.errors?.['required']">Please Enter your age
                         </small>
-                        <small class="small" *ngIf="login.get('age')?.errors?.['min']">Age must be 18 -80 </small>
-                        <small class="small" *ngIf="login.get('age')?.errors?.['max']">Age must be 18 -80 </small>
-                       
+                        <small class="small" *ngIf="login.get('age')?.errors?.['min']">Age must be greater than 18
+                        </small>
+                        <small class="small" *ngIf="login.get('age')?.errors?.['max']">Age must be less than 80 </small>
+
                     </div>
-
-
+                    <br>
+                    
+                    <div class="form-group">
+                        <mat-form-field appearance="fill" class="example-form-field">
+                            <mat-label class="label">Date of Birth</mat-label>
+                            <input matInput [matDatepicker]="datepicker" formControlName="dob"  name="Age">
+                            <mat-hint>MM/DD/YYYY</mat-hint>
+                            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                            <mat-datepicker #datepicker>
+                              <mat-datepicker-actions>
+                                <button mat-button matDatepickerCancel>Cancel</button>
+                                <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                              </mat-datepicker-actions>
+                            </mat-datepicker>
+                          </mat-form-field>
+                    </div>
+                    <br>
                 </div>
                 <div class="form-group">
 
-                    <label class="label">Gender</label><br>
-                    <div class="age">
-                        <input type="radio" class="inputR" name="age" value="male"><span class="agespan">Male</span>
-                    </div>
-                    <div class="age">
-                        <input type="radio" class="inputR" name="age" value="female"><span class="agespan">Female</span>
-                    </div>
-                    <div class="age">
-                        <input type="radio" class="inputR" name="age" value="Others"><span class="agespan">Others</span>
-                    </div>
+                    <label class="label">Gender</label>
+                    <br>
+                   
+                    <mat-radio-group aria-label="Gender" class="label">
+                    
+                        <div class="age">
+                            
+                            <mat-radio-button name="age" color="primary" value="male">Male</mat-radio-button>
+                        </div>
+                        
+                        <div class="age">
+                            
+                            <mat-radio-button name="age" color="primary" value="female">Female</mat-radio-button>
+                        </div>
+                        <div class="age">
+                            
+                            <mat-radio-button name="age" color="primary" value="Others">Others</mat-radio-button>
+                        </div>
+                      </mat-radio-group>
                 </div>
+               <br>
+
+
                 <div formGroupName="address">
                     <label class="label">
                         <h3>Address</h3>
                     </label>
                     <div class="form-group">
 
-                        <label class="label">City</label><br>
-                        <input type="text" formControlName="city" placeholder="City" name="city" class="input" 
-                            pattern="[A-Za-z\s]"><br>
+                       
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label class="label">City</mat-label>
+                                <input matInput type="text" formControlName="city" placeholder="City" name="city" class="input"
+                                pattern="[A-Za-z\s]">
+                            </mat-form-field>
+                            <br>
+                            
                     </div>
                     <div class="form-group">
 
-                        <label class="label">State</label><br>
-                        <input type="text" formControlName="state" placeholder="State" name="state" class="input"
-                             pattern="[A-Za-z\s]"><br>
+                 
+
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label class="label">State</mat-label>
+                                <input matInput type="text" formControlName="state" placeholder="State" name="state" class="input"
+                                pattern="[A-Za-z\s]">
+                            </mat-form-field>
+                            <br>
+
                     </div>
                     <div class="form-group">
 
-                        <label class="label">Postal-Code</label><br>
-                        <input type="number" formControlName="code" placeholder="Postal-Code" name="code" class="input"
-                             pattern="[0-9]{6}"><br>
+                       
+                            <mat-form-field class="example-full-width" appearance="fill">
+                                <mat-label class="label">Postal-code</mat-label>
+                                <input matInput type="number" formControlName="code" placeholder="Postal-Code" name="code" class="input"
+                                pattern="[0-9]{6}">
+                            </mat-form-field>
+                            <br>
                     </div>
 
 
                 </div>
 
                 <div class="login">
-                    <button type="button" class="btn" (click)="loginfunction()">Signin</button>
+
+                    <button mat-raised-button color="primary" (click)="loginfunction()" class="btn">Signin</button>
+                    
                 </div>
 
 
