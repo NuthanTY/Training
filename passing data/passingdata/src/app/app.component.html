@@ -1,0 +1,22 @@
+<div>
+  <h2>PARENT</h2>
+</div>
+<div>
+  <form action="" [formGroup]="data">
+    <div class="form">
+      <label for="" class="label" >Parents Name</label>
+      <input type="text" class="input" formControlName="name">
+      <button (click)="submited=true" type="submit">Click</button>
+    </div>
+  </form>
+ 
+</div>
+<div>
+ <h3>Child={{Name}} Age={{Age}} Marks ={{Marks}} 2ndChild ={{Name2}}</h3>  
+
+</div>
+
+
+<app-child (parentfunction) = parentfunction($event) [parent]="data" [child]="Name2" [submited]="submited"  ></app-child>
+<app-child2 (parentfunction2)=" parentfunction2($event)" [child]="Name"></app-child2>
+<router-outlet></router-outlet>
