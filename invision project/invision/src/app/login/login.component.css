@@ -1,0 +1,63 @@
+.nav{
+    background-color: white;
+    /* width: 1440px; */
+    height: 100px;
+}
+.robosoft-img-nav{
+    width: 280px;
+    height: 54px;
+    margin-left: 130px;
+    margin-top: 23px;
+}
+.form {
+    height: 1138px;
+    /* width: 1440px; */
+    background: linear-gradient(52.03deg, #7A7FC8 0%, #BD385B 100%);
+  }
+
+  .rectangle {
+    height: 385px;
+    width: 535px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-top: 377px;
+    text-align: center;
+  }
+  .input-form{
+    margin-top: 200px;
+  }
+  .input{
+    height: 56px;
+    width: 328px;
+    border-radius: 4px;
+    margin-bottom: 19px;
+    border: 1px solid rgba(0,0,0,0.38);
+    
+  }
+  .btn {
+    height: 49px;
+    width: 149px;
+    border-radius: 50px;
+    background-color: 
+    #D92756;
+    color: white;
+    border: none;
+    
+  }
+  .h2 {
+    
+    color: #000000;
+    margin-top: 19px;
+   padding-top:25px ;
+    text-align: center;
+  }
+  a{
+    text-decoration: none;
+     color:inherit;
+     
+  }
+  .a{
+    margin-top: 10px;
+  }
+ 

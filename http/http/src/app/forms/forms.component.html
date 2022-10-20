@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="main heading">
+        <h1 id="heading">Book Your Ticket here</h1>
+    </div>
+ 
+    <div class="form" >
+        <form action="" #homeform="ngForm" >
+            <div class="name">
+                <label for="" class="label">Name</label><br>
+                <input type="text"  class="input " [class.is-invalid]="name.invalid" #name="ngModel" name="name" placeholder="Enter your Name" required  [(ngModel)]="usermodel.name">
+                <small [class.dis]="name.valid" style="color:red ;">Name is required</small>
+            </div><br>
+            <div class="name">
+                <label for="" class="label">Email</label><br>
+                
+                <input type="email" class="input" [class.is-invalid]="email.invalid && email.touched" #email ="ngModel" name="email" placeholder="Enter your Email" required [(ngModel)]="usermodel.email">
+                <small [class.dis]="email.valid" style="color:red ;">email is required</small>
+            </div><br>
+            <div class="name">
+                <label for="" class="label">Mobile</label><br>
+                <input type="tel" class="input" [class.is-invalid]="phone.invalid" #phone="ngModel" pattern="^\d{10}$" name="phone" placeholder="Enter your Contact number" required [(ngModel)]="usermodel.mobile">
+                <small [class.dis]="phone.valid" style="color:red ;"> Phone number is required and must be 10 digit </small>
+              
+            </div><br>
+            <div class="name">
+                <label for="" class="label">Movies</label>
+                <select (blur)="validate(movie.value)" (change)="validate(movie.value)" name="movie" id="movie" required [(ngModel)]="usermodel.movie" #movie="ngModel"  [class.is-invalid]="movieErrors">
+                    <option value="default">Select movie</option>
+                    <option *ngFor ="let movie of movies">{{movie}}</option>
+                </select><br>
+                <small [class.dis]="!movieErrors || movie.untouched" style="color: red;">Select Movie</small>
+            </div><br>
+            <div class="name">
+                <label for="" class="label">Timings</label> <br>
+                
+                <input type="radio" name="time" #time="ngModel" value="morning" class="time1" [(ngModel)]="usermodel.time"> <span class="time" > Morning(10:30)</span>  <br>
+                <input type="radio" name="time" #time="ngModel" value="AfterNoon" class="time1" [(ngModel)]="usermodel.time"> <span class="time" > Noon(2:30)</span>  <br>
+                <input type="radio" name="time" #time="ngModel" value="Night" class="time1" [(ngModel)]="usermodel.time"> <span class="time" > Night(8:00)</span>  <br>
+            </div><br>
+            <button class="btn" [disabled]="homeform.form.invalid || movieErrors" (click)="submit(homeform)" >Book Now</button> <button class="btn" onclick="reset()">Reset</button>
+            
+            
+
+        </form>
+    </div>
+</div>
+
