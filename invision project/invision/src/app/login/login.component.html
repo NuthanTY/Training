@@ -4,7 +4,7 @@
     </div>
     <div class="rectangle">
         <div class="rec">
-            <form action="">
+            <form action="" [formGroup]="login">
                 <div class="input-form">
                     <div class="form-group">
 
@@ -13,13 +13,25 @@
                         </h2>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="input" placeholder="Enter Username">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Username</mat-label>
+                            <input type="text" class="input"  matInput #name formControlName="name">
+                          </mat-form-field>
+                          <br>
+                          
+                       
                     </div>
                     <div class="form-group">
-                        <input type="password" class="input" placeholder="Enter password">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter password</mat-label>
+                            <input type="text" class="input"  matInput #pass formControlName="password">
+                          </mat-form-field>
+                          <br>
+
+                   
                     </div>
                     <div class="form-group">
-                        <button class="btn" >Login</button>
+                        <button class="btn"  (click)="addlocal()" >Login</button>
                     </div>
                     <div class="form-group">
                         <a href="#"  routerLink="/email">
@@ -32,3 +44,4 @@
     </div>
 
 </div>
+<!-- {{users[1].id}} -->

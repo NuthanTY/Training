@@ -1,0 +1,178 @@
+<div >
+    <div class="nav">
+        <img src="assets/Robosoft_logo_horizontal.png" alt="" class="robosoft-img-nav" routerLink="/login">
+
+        <div class="user">
+            <p class="user-p">{{name}}</p>
+            <img src="/assets/photo-1438761681033-6461ffad8d80.jpeg" alt="" class="user-img">
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="questions">
+            <p class="p">Your</p><br>
+            <p class="p">Questioniers</p>
+            <button class="new-quest-btn">New questioniers</button>
+            <button class="quest-btn">Secure coding guide</button>
+            <button class="quest-btn">Imps questioniers</button>
+            <button class="quest-btn">PA questioniers</button>
+            <button class="quest-btn">Process guidelines</button>
+
+        </div>
+
+        <div class="forms">
+            <div class="form">
+                <div class="form-question">
+                    <h3 class="questioniers">Questioniers</h3>
+                    <div class="form-question question">
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Enter Title</mat-label>
+                            <input type="text" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-question question">
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Description</mat-label>
+                            <input type="text" matInput>
+                        </mat-form-field>
+                    </div>
+                    <div class="question-flx">
+
+                        <div class="form-question1 ">
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Button Title</mat-label>
+                                <input type="text" matInput>
+                            </mat-form-field>
+
+                        </div>
+                        <div class="form-question1 ">
+
+                            <mat-form-field appearance="outline">
+                                <mat-label>Button Text</mat-label>
+                                <input type="text" matInput>
+                            </mat-form-field>
+
+                        </div>
+
+                    </div>
+                    <div class="form-question question">
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Check box text</mat-label>
+                            <input type="text" matInput>
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="additionaldetails">
+                        <h3 class="questioniers">Aditional Details</h3>
+                        <div class="dates">
+                            <div class="sdate">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Select Start Date</mat-label>
+                                    <input matInput  [matDatepicker]="picker" >
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                  </mat-form-field>
+                            </div>
+
+                            <div class="edate">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Select End Date</mat-label>
+                                    <input matInput [matDatepicker]="picker2">
+                                    <mat-hint>MM/DD/YYYY</mat-hint>
+                                    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker2></mat-datepicker>
+                                  </mat-form-field>
+                            </div>
+                            <div class="reminder">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Auto Remainder</mat-label>
+                                    <input type="text" matInput>
+                                   
+                                </mat-form-field>
+        
+                            </div>
+                        </div>
+                        <div class="files">
+                            <div class="sheets">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Select Content PPT File</mat-label>
+                                    <input type="text" matInput>
+                                </mat-form-field>
+                            </div>
+                            <div class="sheets">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Select Participant xl Sheet</mat-label>
+                                    <input type="text" matInput>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="inputarea">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Mail Body</mat-label>
+                                <textarea matInput></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="actions">
+                <div class="acttop">
+
+                
+                <div class="actbtn">
+                    <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="save"></mat-icon><p class="verb"> SAVE</p></div>
+                    
+                </div>
+                <div class="actbtn">
+                    <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="preview"></mat-icon><p class="verb">PREVIEW</p> </div>
+                </div>
+                <div class="actbtn">
+                    <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="publish"></mat-icon><p class="verb">PUBLISH</p> </div>
+                </div>
+                <div class="actbtn">
+                     <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add_alert"></mat-icon> <p class="verb">REMIND</p></div>
+                </div>
+                <div class="actbtn">
+                    <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="article"></mat-icon><p class="verb">GENERATE REPORT</p> </div>
+                </div>
+            </div>
+                <div class="button">
+                    <div *ngIf="click" [class.opa1]="click">
+                        <div class="onplus" >
+                            <div >
+                                <button class="onplusbtn" routerLink="/changepassword">Change Password</button>
+                            </div>
+                            <div >
+                                <button class="onplusbtn" (click)="opendialog2()">Add/Remove Admins</button>
+                            </div>
+                            <div >
+                                <button class="onplusbtn" (click)="opendialog3()">Add/Remove Super Admins</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="actbutton" (click)="plus()"><div *ngIf="click; then noshow; else show"></div></button>
+                    <ng-template #show>
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+                    </ng-template>
+                    <ng-template #noshow>
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="close"></mat-icon>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <app-footer></app-footer>
+    

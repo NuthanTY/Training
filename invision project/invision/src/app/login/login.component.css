@@ -1,6 +1,6 @@
 .nav{
     background-color: white;
-    /* width: 1440px; */
+    width: 1440px;
     height: 100px;
 }
 .robosoft-img-nav{
@@ -11,7 +11,7 @@
 }
 .form {
     height: 1138px;
-    /* width: 1440px; */
+    width: 1440px;
     background: linear-gradient(52.03deg, #7A7FC8 0%, #BD385B 100%);
   }
 
@@ -28,12 +28,15 @@
     margin-top: 200px;
   }
   .input{
-    height: 56px;
+    /* height: 56px; */
     width: 328px;
-    border-radius: 4px;
+    /* border-radius: 4px;
     margin-bottom: 19px;
-    border: 1px solid rgba(0,0,0,0.38);
+    border: 1px solid rgba(0,0,0,0.38); */
     
+  }
+  .mat-form-field {
+    width: 328px;
   }
   .btn {
     height: 49px;
@@ -60,4 +63,11 @@
   .a{
     margin-top: 10px;
   }
- 
+  .dis{
+    display: none;
+}
+.small{
+  margin-left: -180px;
+  margin-top: -130px;
+  color:rgb(212, 26, 26);
+}

@@ -1,0 +1,102 @@
+.full{
+    height: 484px;
+    width: 1033px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+
+}
+.top{
+    display: flex;
+    position: relative;
+    
+}
+.names{
+    margin-right: 20px;
+ 
+}
+.names2 .mat-form-field{
+    flex-basis: 50%;
+    width: 306px;
+}
+.form{
+    margin-left: 60px;
+    margin-top: 63px;
+}
+.actbutton{
+    position: absolute;
+    height: 51px;
+    width: 51px;
+    background-color: #D92756;
+    border: none;
+    border-radius: 50%;
+    
+    margin-left: 80%;
+    /* margin-right: 22px; */
+   top: 3.5px;
+    color: #F7F7F7;
+  
+  }
+
+  hr{
+    height: 2px;
+  /* width: 1034px; */
+  border: 1px dashed #A2A2A2;
+  opacity: 0.6;
+  }
+
+  .bottom{
+  display: flex;
+  }
+  .actbutton2{
+  
+    height: 51px;
+    width: 51px;
+    background-color: #D92756;
+    border: none;
+    border-radius: 50%;
+    
+    margin-left: 2.99%;
+    margin-top: 0.4%;
+  
+    color: #F7F7F7;
+  
+  }
+  .actbutton3{
+  
+    height: 51px;
+    width: 51px;
+    background-color: #D92756;
+    border: none;
+    border-radius: 50%;
+    
+    margin-left: 2.99%;
+    margin-top: 0.4%;
+  
+    color: #F7F7F7;
+  
+  }
+  .btn {
+    height: 49px;
+    width: 129px;
+    border-radius: 50px;
+    background-color: 
+    #D92756;
+    color: white;
+    border: none;
+    margin-right: 32px;
+    
+  }
+  .bottombtn{
+    margin-top: 59px;
+    display: flex;
+    margin-left: 46%;
+  }
+ .icon .mat-icon{
+    position: absolute;
+    top: 18%;
+    margin-left: 65%;
+    height: 25px;
+  width: 25px;
+  size: 2px;
+  color: #74747c;
+ }

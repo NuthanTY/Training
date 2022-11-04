@@ -7,18 +7,41 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { EmailcheckComponent } from './emailcheck/emailcheck.component';
 import { routings } from './app-routing.module';
+import { HomescreenComponent } from './homescreen/homescreen.component';
+import { MaterialModule } from './material/material.module';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddAdminComponent } from './add-admin/add-admin.component';
+import { AddSadminComponent } from './add-sadmin/add-sadmin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { environment } from '../environments/environment';
+import { FooterComponent } from './footer/footer.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     EmailcheckComponent,
-    routings
+    routings,
+    HomescreenComponent,
+    ChangepasswordComponent,
+  
+    AddAdminComponent,
+    AddSadminComponent,
+    FooterComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

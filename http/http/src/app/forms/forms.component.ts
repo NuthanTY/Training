@@ -27,16 +27,26 @@ export class FormsComponent implements OnInit {
   }
 
   submit(formvalue:NgForm){
-    console.log(formvalue.value)
+    
 
     const postbody={
       title: formvalue.value.name,
-      body: formvalue.value.email,
+      email: formvalue.value.email,
+      movie: formvalue.value.movie
       
     }
+
+    const body={
+      name:formvalue.value.name,
+      userId:'11',
+      
+    }
+    this.user.update(body).subscribe(data => console.log(data));
     this.user.add(postbody).subscribe(daa =>{
       console.log(daa)
+      
     })
+
   
    alert("Ticket booked sucessfully");
   

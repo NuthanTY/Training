@@ -6,12 +6,24 @@ interface user {
   name:string,
   email:string
 }
+
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
   constructor(private http:HttpClient) { }
+
+  update(body:any){
+    const head = new HttpHeaders({
+      'tokenkey':'123123',
+      'type':'siri'
+    })
+
+    const parms = new HttpParams()
+    .set('page','676')
+   return this.http.put('https://jsonplaceholder.typicode.com/users/10',body,{headers:head,params:parms})
+  }
  
   add(body:any){
 

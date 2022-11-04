@@ -1,0 +1,9 @@
+<form action="" [formGroup]="form">
+    <input type="text" formControlName="name"><br>
+    <button (click)="go()" style="width:100px; height: 25px;">click</button>
+  
+</form>
+<h2>{{name}}</h2>
+<h2>{{name | uppercase }}</h2>
+<h2>{{Datetoday | date:'short'|uppercase }}</h2>
+<h2> reverse of string is {{ name | cust}}</h2>

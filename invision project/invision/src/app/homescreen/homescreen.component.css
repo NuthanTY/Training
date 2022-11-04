@@ -1,0 +1,230 @@
+
+.opa{
+  opacity: 0.2;
+
+}
+.opa1{
+  opacity: 1;
+}
+.nav{
+    background-color: white;
+    width: 1440px;
+    height: 100px;
+   
+  box-shadow: 0 1px 12px 0 rgba(0,0,0,0.14);
+}
+.robosoft-img-nav{
+    width: 280px;
+    height: 54px;
+    margin-left: 130px;
+    margin-top: 23px;
+}
+.user-img{
+    box-sizing: border-box;
+    height: 44px;
+    width: 44px;
+    border: 2px solid #D92756;
+    border-radius: 50%;
+    
+}
+.user{
+    display: flex;
+    float: right;
+    margin-right: 130px;
+    margin-top: 28px;
+}
+.user-p{
+    font-family: Roboto;
+  font-size: 16px;
+    margin-top: 10px;
+    margin-right:10px
+}
+.questions{
+    height: 476px;
+  width: 280px;
+  box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+  flex-basis: 25%;
+  margin-left: 130px;
+ margin-top: 13px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+}
+.main{
+    display: flex;
+    width: 1440px;
+    height: 1025px;
+    background-color: #F7F7F7;
+}
+.new-quest-btn{
+  height: 49px;
+  width: 290px;
+  background-color: #D92756;
+  color: white;
+  font-size: 14px;
+  border-radius: 50px;
+  border: none;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+
+}
+.quest-btn{
+  height: 49px;
+  width: 290px;
+  border: none;
+  color: black;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  text-align: left;
+  margin-left: 40px;
+  margin-bottom:12px ;
+}
+.quest-btn:hover{
+  border-radius: 24px;
+  background-color: rgba(217,39,86,0.05);
+}
+.p{
+  font-size: 24px;
+  margin-left: 40px;
+  padding: -10px;
+  margin-bottom: -20px;
+  margin-top: 18px;
+}
+.forms{
+  width: 880px;
+  height: 952px;
+  box-shadow: 0 4px 40px 0 rgba(217,39,86,0.08);
+  margin-top: 13px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  margin-left: 20px;
+  display: flex;
+
+
+}
+.mat-form-field{
+  width: 580px;
+ 
+
+  margin-left: 20px;
+  margin-bottom: 27px;
+ 
+}
+
+
+.question-flx{
+  display: flex;
+  width: 100%;
+       
+}
+
+
+.form-question1 .mat-form-field{
+  width: 280px;
+
+}
+
+
+.questioniers{
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.label{
+ margin-left: 40px; 
+  margin-top: -11px;
+   position: absolute; 
+  background-color: white; 
+  font-size: 15px;
+  color: rgba(0,0,0,0.6);
+ 
+  
+}
+.actions{
+  margin-left: 30px;
+  position: relative;
+  margin-top: 20px;
+  padding-top: 19px;
+}
+.acttop{
+  border-left:2px solid #D92756;
+  height: 351px;
+}
+.actbtn{
+  margin-left: 30px;
+  margin-bottom: 19px;
+
+}
+.actp{
+  width: 200px;
+  height: 46px;
+  border: none;
+  color: #D92756;
+  font-size: 14px;
+  background-color: #FDF4F6;
+  text-align: left;
+  display: flex;
+  
+  
+}
+.actbtn .mat-icon{
+  /* padding: 5px; */
+  margin-top: 10px;
+  margin-left: 12px;
+}
+.verb{
+ /* padding: 5px; */
+ margin-top: 12px;
+ margin-left: 12px;
+
+}
+.dates{
+  display: flex;
+}
+
+.dates .mat-form-field{
+  width: 180px;
+}
+
+.files .mat-form-field{
+  width: 280px;
+}
+.files{
+  display: flex;
+}
+.actbutton{
+  position: absolute;
+  height: 51px;
+  width: 51px;
+  background-color: #D92756;
+  border: none;
+  border-radius: 50%;
+  bottom: 18px;
+  margin-left: 180px;
+  /* margin-right: 22px; */
+  
+  color: #F7F7F7;
+
+}
+.onplus{
+  position: relative;
+  margin-top: 350px;
+  opacity: 1.3;
+ 
+}
+.onplusbtn{
+  height: 33.6px;
+  width: 194.6px;
+  background-color: #f8e3e7;
+  color: #D92756;
+  border: none;
+  border-radius: 25px;
+  margin-bottom: 16px;
+}
+.mainn{
+  opacity: 0.2;
+}
+
+.mat-form-field .mat-datepicker-toggle{
+  color: #D92756;
+}

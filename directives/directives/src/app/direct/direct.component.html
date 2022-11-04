@@ -1,0 +1,30 @@
+<div class="full">
+<div class="heading">
+    <h1>Lets Know Directives</h1>
+</div>
+<div class="structural" >
+    <div class="btn">
+        <button (click)="click()">Click Me</button>
+    </div>
+    <div *ngIf="nameis ; then name; else noname">  </div>
+</div>
+
+<ng-template #name>
+    <h3 [ngClass]="{ one:clr }">Nuthan</h3>
+</ng-template>
+
+<ng-template #noname>
+    <h3 [ngClass]="{ two:clr }">Please Click the button  </h3>
+</ng-template>
+
+<div *ngFor=" let person of persons">
+    <ul>
+        <li>{{person}}</li>
+    </ul>
+
+
+</div>
+
+<div appCustom> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, nostrum. Doloremque a magnam eius culpa sunt architecto, quam voluptatibus laborum veniam dolor nisi delectus sapiente! Ipsum voluptas dignissimos amet in!</div>
+
+</div>

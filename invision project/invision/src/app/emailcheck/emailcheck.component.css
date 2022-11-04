@@ -1,6 +1,6 @@
 .nav{
     background-color: white;
-    /* width: 1440px; */
+    width: 1440px;
     height: 100px;
 }
 .robosoft-img-nav{
@@ -11,7 +11,7 @@
 }
 .form {
     height: 1138px;
-    /* width: 1440px; */
+    width: 1440px;
     background: linear-gradient(52.03deg, #7A7FC8 0%, #BD385B 100%);
   }
 
