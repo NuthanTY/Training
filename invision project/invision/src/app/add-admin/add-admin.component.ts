@@ -26,17 +26,14 @@ button=true;
     this.adminsjson();
    
   }
+  
 admin= this.form.group({
   name:[''],
   code:[''],
   email:['']
 })
 
-updateform=this.form.group({
-  name:[''],
-  code:[''],
-  email:['']
-})
+
 
 encrypt(){
   this.code = this.admin.get('code')?.value;
@@ -95,6 +92,10 @@ adminsjson(){
 
 
 deleteadmin(id:any){
-  this.service.deleteadmin(id.id).subscribe(data =>  this.adminsjson())
+  if( confirm("Are you sure you want to delete...!")){
+    this.service.deleteadmin(id.id).subscribe(data =>  this.adminsjson())
+  }
+
+  
 }
 }

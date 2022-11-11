@@ -100,3 +100,10 @@
   size: 2px;
   color: #74747c;
  }
+ .scroll::-webkit-scrollbar {
+  display: none;
+}
+.scroll{
+  height: 150px; 
+  overflow-y: scroll;
+}

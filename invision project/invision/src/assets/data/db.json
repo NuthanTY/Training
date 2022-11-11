@@ -2,32 +2,35 @@
   "users": [
     {
       "password": "dimpi",
-      "name": "dimple",
+      "name": "Dimple",
       "id": 1
     },
     {
-      "password": "siri",
-      "name": "nuthan",
+      "password": "Aisiri",
+      "name": "Nuthan",
       "id": 2
-    },
-    {
-      "password": "kripa123",
-      "name": "kripa",
-      "id": 3
     }
   ],
   "admins": [
     {
-      "name": "nuthan",
-      "code": "nuthaneeehvhgf",
-      "email": "nuthan2@gmail.com",
-      "id": 1
-    },
-    {
-      "name": "aisiri",
+      "name": "aisiri raj",
       "code": "4MC19IS002",
       "email": "aisiriraj9@gmail.com",
       "id": 2
+    },
+    {
+      "name": "nuthan ty",
+      "code": "4MC18EC044",
+      "email": "nuthan2@gmail.com",
+      "id": 3
+    }
+  ],
+  "sadmins": [
+    {
+      "name": "nuthan",
+      "code": "nuthan123",
+      "email": "nuthan2@gmail.com",
+      "id": 1
     }
   ]
 }

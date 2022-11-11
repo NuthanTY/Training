@@ -1,68 +1,77 @@
 <div class="full">
     <div class="form">
+
         <div class="heading">
             <h2>Add/Remove Super Admins</h2>
         </div>
         <div class="icon">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="close" routerLink="/homescreen" mat-dialog-close></mat-icon>
-    
-            </div>
-
-        <div class="top">
-            <div class="names">
-                <mat-form-field appearance="outline">
-                    <mat-label>Enter Name</mat-label>
-                    <input type="text" matInput>
-                </mat-form-field>
-            </div>
-            <div class="names">
-                <mat-form-field appearance="outline">
-                    <mat-label>Enter Employee Code</mat-label>
-                    <input type="text" matInput>
-                </mat-form-field>
-            </div>
-            <div class="names2">
-                <mat-form-field appearance="outline">
-                    <mat-label>Enter Mail-ID</mat-label>
-                    <input type="text" matInput>
-                </mat-form-field>
-            </div>
-            <button class="actbutton">
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
-            </button>
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="close" routerLink="/homescreen"
+                mat-dialog-close></mat-icon>
 
         </div>
+
+        <form action="" [formGroup]="aadmin">
+            <div class="top">
+
+                <div class="names">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Name</mat-label>
+                        <input type="text" matInput formControlName="name" #aname>
+                    </mat-form-field>
+                </div>
+                <div class="names">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Employee Code</mat-label>
+                        <input type="text" matInput formControlName="code" #acode>
+                    </mat-form-field>
+                </div>
+                <div class="names2">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter Mail-ID</mat-label>
+                        <input type="email" matInput formControlName="email" #aemail>
+                    </mat-form-field>
+                </div>
+                <button class="actbutton" (click)="add()" *ngIf="button">
+                    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add">
+                    </mat-icon>
+                </button>
+
+            </div>
+        </form>
         <hr>
-        <div class="bottom" *ngIf="">
+
+        <div  class="scroll" >
+            <div *ngFor="let admin of sadmins" class="bottom" >
             <div class="names">
                 <mat-form-field appearance="outline">
-                    <mat-label>Enter Name</mat-label>
-                    <input type="text" matInput>
+                  
+                    <input type="text" matInput value="{{admin.name}}" readonly>
                 </mat-form-field>
             </div>
             <div class="names">
                 <mat-form-field appearance="outline">
-                    <mat-label>Enter Employee Code</mat-label>
-                    <input type="text" matInput>
+                  
+                    <input type="text" matInput value="{{admin.code}}" readonly>
                 </mat-form-field>
             </div>
             <div class="names2">
                 <mat-form-field appearance="outline">
-                    <mat-label>Enter Mail-ID</mat-label>
-                    <input type="text" matInput>
+                
+                    <input type="text" matInput value="{{admin.email}}" readonly>
                 </mat-form-field>
             </div>
             <button class="actbutton2">
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" (click)="edit(admin)"></mat-icon>
             </button>
-            <button class="actbutton3">
+            <button class="actbutton3" (click)="deleteadmin(admin)">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
             </button>
+            </div>
 
         </div>
         <div class="bottombtn">
-            <button class="btn" routerLink="/homescreen" mat-dialog-close>Update</button>
-            <button class="btn" routerLink="/homescreen" mat-dialog-close >Cancel</button>
+            <button class="btn" (click)="update()" >Update</button>
+            <button class="btn" routerLink="/homescreen" mat-dialog-close>Cancel</button>
 
         </div>
 

@@ -3,6 +3,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { AddAdminComponent } from '../add-admin/add-admin.component';
 import { AddSadminComponent } from '../add-sadmin/add-sadmin.component';
 import { ChangepasswordComponent } from '../changepassword/changepassword.component';
+import { InvisionService } from '../invision.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homescreen',
@@ -10,24 +12,27 @@ import { ChangepasswordComponent } from '../changepassword/changepassword.compon
   styleUrls: ['./homescreen.component.css']
 })
 export class HomescreenComponent implements OnInit {
-name:any= 'Joen Dome';
+name:any;
 click=false;
 
-  constructor(private md:MatDialog) { }
+  constructor(private md:MatDialog, private service:InvisionService, private route:Router) { }
 
   ngOnInit(): void {
- 
+    this.name=localStorage.getItem('name')
+    this.name=this.name.replace(/['"]+/g, '')
+    
   
     
+  }
+  login(){
+    localStorage.removeItem('name')
+    this.route.navigateByUrl('/login')
+
   }
 plus(){
   
   this.click =!this.click
 
-  localStorage.setItem('user1','Aisiri');
-  sessionStorage.setItem('user2','Nuthan');
-  // this.name=localStorage.getItem('user1');
-  this.name=sessionStorage.getItem('user2')
 }
 opendialog1(){
   this.md.open(ChangepasswordComponent)
@@ -38,4 +43,7 @@ opendialog2(){
 opendialog3(){
   this.md.open(AddSadminComponent)
 }
+
+
+
 }

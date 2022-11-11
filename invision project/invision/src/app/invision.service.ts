@@ -48,5 +48,22 @@ export class InvisionService {
     
     return this.http.delete('http://localhost:3000/admins/' +id)
   }
+ 
+  addsadmin(data:any):Observable<admin[]>{
+    return this.http.post<admin[]>('http://localhost:3000/sadmins',data)
+  }
+
+  getsadmins():Observable<admin[]>{
+    return this.http.get<admin[]>('http://localhost:3000/sadmins')
+  }
+  updatesadmin(data:any, id:any){
+    
+    return this.http.put('http://localhost:3000/sadmins/' +id , data)
+  }
+
+  deletesadmin(id:any){
+    
+    return this.http.delete('http://localhost:3000/sadmins/' +id)
+  }
 
 }

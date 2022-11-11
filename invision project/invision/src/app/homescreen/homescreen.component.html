@@ -1,6 +1,6 @@
-<div >
+<div class="body">
     <div class="nav">
-        <img src="assets/Robosoft_logo_horizontal.png" alt="" class="robosoft-img-nav" routerLink="/login">
+        <img src="assets/Robosoft_logo_horizontal.png" alt="" class="robosoft-img-nav" (click)="login()">
 
         <div class="user">
             <p class="user-p">{{name}}</p>
@@ -74,11 +74,11 @@
                             <div class="sdate">
                                 <mat-form-field appearance="outline">
                                     <mat-label>Select Start Date</mat-label>
-                                    <input matInput  [matDatepicker]="picker" >
+                                    <input matInput [matDatepicker]="picker">
                                     <mat-hint>MM/DD/YYYY</mat-hint>
                                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                                     <mat-datepicker #picker></mat-datepicker>
-                                  </mat-form-field>
+                                </mat-form-field>
                             </div>
 
                             <div class="edate">
@@ -88,15 +88,15 @@
                                     <mat-hint>MM/DD/YYYY</mat-hint>
                                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                                     <mat-datepicker #picker2></mat-datepicker>
-                                  </mat-form-field>
+                                </mat-form-field>
                             </div>
                             <div class="reminder">
                                 <mat-form-field appearance="outline">
                                     <mat-label>Auto Remainder</mat-label>
                                     <input type="text" matInput>
-                                   
+
                                 </mat-form-field>
-        
+
                             </div>
                         </div>
                         <div class="files">
@@ -126,39 +126,57 @@
             <div class="actions">
                 <div class="acttop">
 
-                
-                <div class="actbtn">
-                    <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="save"></mat-icon><p class="verb"> SAVE</p></div>
-                    
+
+                    <div class="actbtn">
+                        <div class="actp">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="save"></mat-icon>
+                            <p class="verb"> SAVE</p>
+                        </div>
+
+                    </div>
+                    <div class="actbtn">
+                        <div class="actp">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="preview"></mat-icon>
+                            <p class="verb">PREVIEW</p>
+                        </div>
+                    </div>
+                    <div class="actbtn">
+                        <div class="actp">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="publish"></mat-icon>
+                            <p class="verb">PUBLISH</p>
+                        </div>
+                    </div>
+                    <div class="actbtn">
+                        <div class="actp">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add_alert">
+                            </mat-icon>
+                            <p class="verb">REMIND</p>
+                        </div>
+                    </div>
+                    <div class="actbtn">
+                        <div class="actp">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="article"></mat-icon>
+                            <p class="verb">GENERATE REPORT</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="actbtn">
-                    <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="preview"></mat-icon><p class="verb">PREVIEW</p> </div>
-                </div>
-                <div class="actbtn">
-                    <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="publish"></mat-icon><p class="verb">PUBLISH</p> </div>
-                </div>
-                <div class="actbtn">
-                     <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add_alert"></mat-icon> <p class="verb">REMIND</p></div>
-                </div>
-                <div class="actbtn">
-                    <div class="actp"><mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="article"></mat-icon><p class="verb">GENERATE REPORT</p> </div>
-                </div>
-            </div>
                 <div class="button">
                     <div *ngIf="click" [class.opa1]="click">
-                        <div class="onplus" >
-                            <div >
+                        <div class="onplus">
+                            <div>
                                 <button class="onplusbtn" routerLink="/changepassword">Change Password</button>
                             </div>
-                            <div >
+                            <div>
                                 <button class="onplusbtn" (click)="opendialog2()">Add/Remove Admins</button>
                             </div>
-                            <div >
+                            <div>
                                 <button class="onplusbtn" (click)="opendialog3()">Add/Remove Super Admins</button>
                             </div>
                         </div>
                     </div>
-                    <button class="actbutton" (click)="plus()"><div *ngIf="click; then noshow; else show"></div></button>
+                    <button class="actbutton" (click)="plus()">
+                        <div *ngIf="click; then noshow; else show"></div>
+                    </button>
                     <ng-template #show>
                         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
                     </ng-template>
@@ -175,4 +193,3 @@
 
     </div>
     <app-footer></app-footer>
-    

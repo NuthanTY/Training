@@ -5,13 +5,14 @@ import { EmailcheckComponent } from './emailcheck/emailcheck.component';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { LoginComponent } from './login/login.component';
 import {LoginGuard} from './login.guard';
+import { PermissionGuard } from './permission.guard';
 
 const routes: Routes = [
-  {path: '' , component:LoginComponent,canDeactivate:[LoginGuard]},
-  {path:'login',component:LoginComponent, canDeactivate:[LoginGuard]},
-  {path:'email',component:EmailcheckComponent},
-  {path:'homescreen',component:HomescreenComponent},
-  {path:'changepassword',component:ChangepasswordComponent}
+  {path: '' , component:LoginComponent,canActivate:[LoginGuard]},
+  {path:'login',component:LoginComponent, canActivate:[LoginGuard]},
+  {path:'email',component:EmailcheckComponent,canActivate:[PermissionGuard]},
+  {path:'homescreen',component:HomescreenComponent, canActivate:[PermissionGuard]},
+  {path:'changepassword',component:ChangepasswordComponent,canActivate:[PermissionGuard]}
 ];
 
 @NgModule({

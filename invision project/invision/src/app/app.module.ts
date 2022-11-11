@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddAdminComponent } from './add-admin/add-admin.component';
 import { AddSadminComponent } from './add-sadmin/add-sadmin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { LoginGuard } from './login.guard';
 import { environment } from '../environments/environment';
 import { FooterComponent } from './footer/footer.component';
 
@@ -43,7 +43,7 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

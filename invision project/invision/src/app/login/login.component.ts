@@ -35,14 +35,15 @@ export class LoginComponent implements OnInit {
   loginn= false;
 
   addlocal() {
+    localStorage.setItem('name',JSON.stringify(this.login.get('name')?.value));
+    localStorage.setItem('password',JSON.stringify(this.login.get('password')?.value));
+
     this.invion.getusers().subscribe(data => {
     
 
       for (let i = 0; i < data.length; i++) {
 
         if (this.login.get('name')?.value === data[i].name && this.login.get('password')?.value === data[i].password) {
-localStorage.setItem('name',JSON.stringify(this.login.get('name')?.value));
-localStorage.setItem('password',JSON.stringify(this.login.get('password')?.value));
 
 
 
